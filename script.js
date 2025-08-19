@@ -1,19 +1,15 @@
-// Smooth scrolling
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector('.navbar');
+
   if (navbar) {
-    navbar.style.backgroundColor =
-      window.scrollY > 50 ? 'rgba(10,10,10,0.98)' : 'rgba(10,10,10,0.95)';
+    navbar.style.transition = 'background-color 0.3s ease';
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.style.backgroundColor = 'rgba(10, 10, 10, 0.6)';
+      } else {
+        navbar.style.backgroundColor = 'rgba(10, 10, 10, 0.3)';
+      }
+    });
   }
 });
