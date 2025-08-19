@@ -39,12 +39,27 @@ html {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--accent);
-  text-decoration: none;
+/* Glassy blur effect for navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(10, 10, 10, 0.3); /* semi-transparent */
+  backdrop-filter: blur(10px); /* blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  transition: background-color 0.3s ease;
 }
+
+/* Fade-in animation for logo */
+.logo {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInLogo 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
 
 .nav-link {
   display: flex;
@@ -80,6 +95,7 @@ html {
   display: flex;
   align-items: center;
   padding: 12% 5%;
+  /* background: radial-gradient(circle at center 73.5% 49%, var(--accent-glow) 0%, transparent 70%)no-repeat; */
   background-size: cover;
 }
 
@@ -302,4 +318,11 @@ footer {
     font-size: 1.5rem;
     padding-left: 2rem;
   }
+  @keyframes fadeInLogo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 }
