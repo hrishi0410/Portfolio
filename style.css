@@ -275,7 +275,6 @@ footer {
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
-    background: radial-gradient(circle at 50% 40%, var(--accent-glow) 0%, transparent 60%) no-repeat;
     text-align: center;
     padding-top: 8rem;
     align-items: center;
