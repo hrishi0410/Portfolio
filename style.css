@@ -52,12 +52,17 @@ html {
   transition: background-color 0.3s ease;
 }
 
-/* Fade-in animation for logo */
+/* Logo styling */
 .logo {
-  opacity: 0;
-  transform: translateY(-10px);
-  animation: fadeInLogo 1s ease-out forwards;
-  animation-delay: 0.5s;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #eaa7b2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #ecc0c0;
 }
 
 
