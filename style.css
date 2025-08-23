@@ -315,15 +315,6 @@ footer {
   height: 240px;
   margin: 0 auto; 
 }
-@media (max-width: 768px) {
-  .logo {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-    color: #eaa7b2;
-    display: block;
-  }
-}  
 
   @keyframes fadeInLogo {
   to {
