@@ -315,7 +315,16 @@ footer {
   height: 240px;
   margin: 0 auto; 
 }
-
+.logo {
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  display: block;
+  color: #eaa7b2;
+  text-decoration: none;
+}
+.nav-link {
+  display: none;
+}
   @keyframes fadeInLogo {
   to {
     opacity: 1;
